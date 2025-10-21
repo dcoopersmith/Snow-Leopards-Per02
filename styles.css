@@ -9,7 +9,7 @@ body {
     width: 50%;
     margin: 0 auto;
     background-color: rgba(220, 220, 220, 0.9);
-    padding: 10px 50px 10px 100px;
+    padding: 50px 50px 10px 100px;
     /*  TOP  RIGHT  BOTTOM   LEFT  */
 }
 
@@ -21,6 +21,11 @@ body {
     z-index: 9999;
     background-color: darkred;
     box-shadow: 2px 2px 2px gray;
+}
+
+.logo {
+    box-shadow: none;
+    border-color: darkred;
 }
 
 
@@ -61,4 +66,8 @@ a:visited {
 a:hover {
     color: black;
     font-size: 15px;
+}
+
+strong {
+    color: black;
 }
