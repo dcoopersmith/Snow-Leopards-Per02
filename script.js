@@ -27,6 +27,27 @@ let score = 0;
 function loadQues()
 {
     const question = document.getElementById("ques");
+    const opt = document.getElementById("opt");
+
+    question.textContent = Questions[currQuestion].q;
+    opt.innerHTML = "";
+
+    for ( let i = 0; i < Questions[currQuestion].a.length; i++ )
+    {
+        const choicesDiv = document.createElement("div");
+        const choice = document.createElement("input");
+        const choiceLabel = document.createElement("label");
+
+        choice.type = "radio";
+        choice.name = "answer";
+        choice.value = i;
+
+        choiceLabel.textContent = Questions[currQuestion].a[i].text;
+
+        choicesDiv.appendChild(choice);
+        choicesDiv.appendChild(choiceLabel);
+        opt.appendChild(choicesDiv);
+    }
 }
 
-
+loadQues();
