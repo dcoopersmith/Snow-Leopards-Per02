@@ -14,9 +14,25 @@ const Questions = [
             { text: "black stripes, with orange fur.", isCorrect: false },
             { text: "white dots with black fur.", isCorrect: false },
            ]  
-    }
+    },
+    {
+        q: "Fill in the blank: Snow leopards use their tail for _________.",
+        a: [{ text: "balance.", isCorrect: true },
+            { text: "killing their prey.", isCorrect: false },
+            { text: "grabbing objects.", isCorrect: false },
+            { text: "swinging.", isCorrect: false },
+           ]  
+    },
+    {
+        q: "Fill in the blank: Snow leopards eat _________.",
+        a: [{ text: "frogs.", isCorrect: false },
+            { text: "fish.", isCorrect: false },
+            { text: "lions.", isCorrect: false },
+            { text: "deer.", isCorrect: true },
+           ]  
+    },
 
-    //  ToDo: finish questions....
+    //  ToDo: add more questions???
 
 
 ];
@@ -51,3 +67,33 @@ function loadQues()
 }
 
 loadQues();
+
+function checkAns() 
+{
+    const selectedAns = parseInt(document.querySelector('input[name="answer"]:checked').value );
+    if ( Questions[currQuestion].a[selectedAns].isCorrect )
+    {
+        score++;
+        console.log("Correct!");
+        nextQuestion();
+    }
+    else
+    {
+        console.log("Wrong!");
+        nextQuestion();
+    }
+
+}
+
+function nextQuestion()
+{
+    if ( currQuestion < Questions.length - 1  )
+    {
+        currQuestion++;
+        loadQues();
+    }
+    else
+    {
+        // ToDo: finish this....
+    }
+}
