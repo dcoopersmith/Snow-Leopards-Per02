@@ -94,6 +94,17 @@ function nextQuestion()
     }
     else
     {
-        // ToDo: finish this....
+        document.getElementById("ques").remove();
+        document.getElementById("opt").remove();
+        document.getElementById("btn").remove();
+
+        loadScore();
     }
+}
+
+function loadScore()
+{
+    const totalScore = document.getElementById("score");
+
+    totalScore.textContent = "This is where the score would go!";
 }
