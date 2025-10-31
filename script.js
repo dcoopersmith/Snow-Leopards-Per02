@@ -106,5 +106,5 @@ function loadScore()
 {
     const totalScore = document.getElementById("score");
 
-    totalScore.textContent = "This is where the score would go!";
+    totalScore.textContent = `You scored ${score} out of ${Questions.length}`;
 }
